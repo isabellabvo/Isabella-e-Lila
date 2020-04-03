@@ -6,3 +6,13 @@ b = input('Qual tipo de aposta você quer fazer? (plb, f, ac, t) ')
 fase = ['Come out' , 'Point']
 Point =  0
 
+while fichas > 0:
+    if fichas == 0:
+        break
+    if a == 'n':
+        break
+    while a == 's':
+        dado1 = rnd.randint(1,6)
+        dado2 = rnd.randint(1,6)
+        soma = dado1 + dado2
+        aposta = int(input('Quanto você quer apostar? '))
