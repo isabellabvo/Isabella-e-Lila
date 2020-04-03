@@ -1,1 +1,8 @@
+import random as rnd
+fichas = 50
+a = input('Você quer apostar? s/n ')
+b = input('Qual tipo de aposta você quer fazer? (plb, f, ac, t) ')
+#aposta = int(input('Quanto você quer apostar? '))
+fase = ['Come out' , 'Point']
+Point =  0
 
