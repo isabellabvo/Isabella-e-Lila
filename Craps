@@ -68,3 +68,23 @@ while fichas > 0:
                         a = str(input('Gostaria de apostar novamente? s/n '))
                         b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
 
+
+
+        if b == 'f':
+            if  5 <= soma <= 8:
+                fichas = 0
+            elif soma == 3 or soma == 4 or soma == 9 or soma == 10 or soma == 11:
+                fichas += aposta
+                print('Você venceu a aposta!')
+                a = str(input('Gostaria de apostar novamente? s/n '))
+                b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+            elif soma == 2:
+                fichas += 2* aposta
+                print('Você venceu a aposta!')
+                a = str(input('Gostaria de apostar novamente? s/n '))
+                b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+            else:
+                fichas += 3* aposta
+                print("Você ganhou a aposta")
+                a = str(input('Gostaria de apostar novamente? s/n '))
+                b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
