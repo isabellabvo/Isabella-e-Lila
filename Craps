@@ -38,3 +38,33 @@ while fichas > 0:
                 dado1 = rnd.randint(1,6)
                 dado2 = rnd.randint(1,6)
                 nova_soma = dado1 + dado2
+                
+                if nova_soma == soma:
+                    fichas += aposta
+                    print(fichas)
+                    a = str(input('Gostaria de apostar novamente? s/n '))
+                    b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+            
+                elif nova_soma == 7:
+                    fichas = 0
+                    print(fichas)
+
+                else:
+                    dado1 = rnd.randint(1,6)
+                    dado2 = rnd.randint(1,6)
+                    ultima_soma = dado1 + dado2
+                    if ultima_soma !=7 or nova_soma != ultima_soma:
+                        dado1 = rnd.randint(1,6)
+                        dado2 = rnd.randint(1,6)
+                        ultima_soma = dado1 + dado2
+                        print("Pi")
+
+                    if ultima_soma == 7:
+                        fichas = 0
+                    else:
+                        fichas += aposta
+
+                        print(fichas) 
+                        a = str(input('Gostaria de apostar novamente? s/n '))
+                        b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+
