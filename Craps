@@ -57,7 +57,7 @@ while fichas > 0:
                         dado1 = rnd.randint(1,6)
                         dado2 = rnd.randint(1,6)
                         ultima_soma = dado1 + dado2
-                        print("Pi")
+                        print("Point")
 
                     if ultima_soma == 7:
                         fichas = 0
@@ -88,3 +88,27 @@ while fichas > 0:
                 print("Você ganhou a aposta")
                 a = str(input('Gostaria de apostar novamente? s/n '))
                 b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+                if b == 'ac':
+            if soma == 2 or soma == 3 or soma == 12:
+                fichas += 7* aposta
+                print('Você ganhou a aposta')
+                a = str(input('Gostaria de apostar novamente? s/n '))
+                b = str(input("Que tipo de aposta?"))
+            else:
+                fichas -= aposta
+                print('Você perdeu a aposta')
+                a = str(input('Gostaria de apostar novamente? s/n '))
+                b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+
+        if b == 't':
+            if soma == 12:
+                fichas += 30 * aposta
+                print('Você venceu a aposta!')
+                a = str(input('Gostaria de apostar novamente? s/n '))
+                b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+            else:
+                fichas -= aposta
+                print('Você perdeu a aposta')
+                a = str(input('Gostaria de apostar novamente? s/n '))
+                b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+
