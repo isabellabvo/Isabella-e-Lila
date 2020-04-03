@@ -16,3 +16,25 @@ while fichas > 0:
         dado2 = rnd.randint(1,6)
         soma = dado1 + dado2
         aposta = int(input('Quanto você quer apostar? '))
+
+
+        if b == 'plb':
+
+            if soma == 7 or soma == 11:
+                print(fase[0])
+                fichas += aposta
+                print(fichas)
+                print("você ganhou essa aposta. ")
+                a = str(input('Gostaria de apostar novamente? s/n '))
+                b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+            elif soma == 2 or soma ==3 or soma == 12:
+                fichas -= aposta
+                print(fichas)
+                a = str(input('Gostaria de apostar novamente? s/n '))
+                b = str(input("Qual tipo de aposta você quer fazer? (plb, f, ac, t)"))
+            else:
+                Point == fase[1]
+                print(fase[1])
+                dado1 = rnd.randint(1,6)
+                dado2 = rnd.randint(1,6)
+                nova_soma = dado1 + dado2
